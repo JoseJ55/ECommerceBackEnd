@@ -53,7 +53,7 @@ router.post('/', (req, res) => {
             product_id: product.id,
             tag_id,
           };
-        });
+        }); 
         return ProductTag.bulkCreate(productTagIdArr);
       }
       // if no product tags, just respond
@@ -110,6 +110,13 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   // delete one product by its `id` value
+  try {
+    Tag.destroy({where: {id: req.params.id}});
+    res.send("Data deleted!");
+    res.status(200);
+  } catch(err){
+    res.status(500).json(err);
+  }
 });
 
 module.exports = router;
