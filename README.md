@@ -24,5 +24,9 @@ delete data. The user is able to add products to a category and a tag to add
 them to database. The user is able to also add a new category and tag with the
 same way. The user is also able to update and delete data.
 
+## Images
+
+![Application image](https://github.com/JoseJ55/ECommerceBackEnd/blob/main/images/eCommerce.png?raw=true)
+
 ## Links 
 https://github.com/JoseJ55/ECommerceBackEnd 
